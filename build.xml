@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--For help visit url - http://ant.apache.org/manual-->
+
+<project name="bdb-jni-alt" default="all" basedir=".">
+
+	<target name="init">
+		<tstamp>
+			<format property="BUILD_ID" pattern="dd-MM-yyyy hh:mm " locale="en" />
+		</tstamp>
+
+		<property file="build.properties" />
+
+		<!-- project settings go here -->
+		<property name="jar.filename" value="bdb-${version}.jar" />
+		<property name="debug" value="on" />
+		<property name="src.path" value="src" />
+		<property name="build.path" value="bin" />
+	</target>
+
+	<!--cleanup -->
+	<target name="clean" depends="init">
+		<delete>
+			<fileset dir="${build.path}" includes="**/*" />
+		</delete>
+		<delete file="${jar.filename}"></delete>
+	</target>
+
+	<!--compile the source code into build.path -->
+	<target name="compile" depends="init">
+		<javac destdir="${build.path}" target="1.5" debug="${debug}">
+			<src path="${src.path}/" />
+		</javac>
+	</target>
+
+	<!--create the jar file-->
+	<target name="createJar" depends="compile">
+		<jar destfile="${jar.filename}" basedir="${build.path}"  />
+	</target>
+
+	<!--run ant-->
+	<target name="all" depends="init">
+		<antcall target="createJar" />
+	</target>
+
+</project>
