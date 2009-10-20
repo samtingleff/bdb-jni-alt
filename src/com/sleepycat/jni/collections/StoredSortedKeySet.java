@@ -11,8 +11,8 @@ package com.sleepycat.jni.collections;
 import java.util.Comparator;
 import java.util.SortedSet;
 
+import com.sleepycat.db.Database;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.Database;
 
 /**
  * The SortedSet returned by Map.keySet() and which can also be constructed
@@ -50,7 +50,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredSortedKeySet(Database database, EntryBinding keyBinding,
                               boolean writeAllowed) {
@@ -85,7 +85,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the first element.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object first() {
 
@@ -99,7 +99,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the last element.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object last() {
 
@@ -119,7 +119,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet headSet(Object toKey) {
 
@@ -141,7 +141,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet headSet(Object toKey, boolean toInclusive) {
 
@@ -161,7 +161,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet tailSet(Object fromKey) {
 
@@ -183,7 +183,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet tailSet(Object fromKey, boolean fromInclusive) {
 
@@ -205,7 +205,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet subSet(Object fromKey, Object toKey) {
 
@@ -232,7 +232,7 @@ public class StoredSortedKeySet extends StoredKeySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet subSet(Object fromKey, boolean fromInclusive,
                             Object toKey, boolean toInclusive) {

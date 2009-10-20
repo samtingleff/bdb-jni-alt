@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.persist;
 
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Environment;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Environment;
 import com.sleepycat.jni.persist.evolve.IncompatibleClassException;
 import com.sleepycat.jni.persist.evolve.Mutations;
 import com.sleepycat.jni.persist.model.AnnotationModel;

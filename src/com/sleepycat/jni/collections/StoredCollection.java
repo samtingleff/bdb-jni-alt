@@ -14,12 +14,12 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.JoinConfig;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.JoinConfig;
-import com.sleepycat.jni.db.OperationStatus;
 
 /**
  * A abstract base class for all stored collections.  This class, and its

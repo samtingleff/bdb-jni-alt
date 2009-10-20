@@ -15,7 +15,7 @@ import java.io.ObjectStreamClass;
 import java.io.ObjectStreamConstants;
 import java.io.OutputStream;
 
-import com.sleepycat.jni.db.DatabaseException;
+import com.sleepycat.db.DatabaseException;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 
 /**

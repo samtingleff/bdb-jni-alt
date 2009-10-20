@@ -8,12 +8,12 @@
 
 package com.sleepycat.jni.collections;
 
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.DeadlockException;
+import com.sleepycat.db.Environment;
+import com.sleepycat.db.Transaction;
+import com.sleepycat.db.TransactionConfig;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.DeadlockException;
-import com.sleepycat.jni.db.Environment;
-import com.sleepycat.jni.db.Transaction;
-import com.sleepycat.jni.db.TransactionConfig;
 import com.sleepycat.jni.util.ExceptionUnwrapper;
 
 /**

@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.persist;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * A ValueAdapter where the "value" is the primary key.

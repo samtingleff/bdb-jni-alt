@@ -8,7 +8,7 @@
 
 package com.sleepycat.db.internal;
 
-import com.sleepycat.jni.db.*;
+import com.sleepycat.db.*;
 
 import java.util.Comparator;
 
@@ -43,10 +43,10 @@ public class DbLogc {
 
   /* package */ void close0(int flags) { db_javaJNI.DbLogc_close0(swigCPtr, this, flags); }
 
-  public int get(com.sleepycat.jni.db.LogSequenceNumber lsn, com.sleepycat.jni.db.DatabaseEntry data, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int get(com.sleepycat.db.LogSequenceNumber lsn, com.sleepycat.db.DatabaseEntry data, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.DbLogc_get(swigCPtr, this, lsn, data, flags);
   }
 
-  public int version(int flags) throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.DbLogc_version(swigCPtr, this, flags); }
+  public int version(int flags) throws com.sleepycat.db.DatabaseException { return db_javaJNI.DbLogc_version(swigCPtr, this, flags); }
 
 }

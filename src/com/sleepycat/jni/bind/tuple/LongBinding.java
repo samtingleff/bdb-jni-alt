@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.bind.tuple;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * A concrete <code>TupleBinding</code> for a <code>Long</code> primitive
@@ -16,7 +16,7 @@ import com.sleepycat.jni.db.DatabaseEntry;
  *
  * <p>There are two ways to use this class:</p>
  * <ol>
- * <li>When using the {@link com.sleepycat.jni.db} package directly, the static
+ * <li>When using the {@link com.sleepycat.db} package directly, the static
  * methods in this class can be used to convert between primitive values and
  * {@link DatabaseEntry} objects.</li>
  * <li>When using the {@link com.sleepycat.jni.collections} package, an instance of

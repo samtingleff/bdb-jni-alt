@@ -10,7 +10,7 @@ package com.sleepycat.jni.util.keyrange;
 
 import java.util.Comparator;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * Encapsulates a key range for use with a RangeCursor.

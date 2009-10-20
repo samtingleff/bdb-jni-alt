@@ -12,8 +12,8 @@ import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.OperationStatus;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 
 /**

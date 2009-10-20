@@ -8,7 +8,7 @@
 
 package com.sleepycat.db.internal;
 
-import com.sleepycat.jni.db.*;
+import com.sleepycat.db.*;
 
 import java.util.Comparator;
 
@@ -90,16 +90,16 @@ public class DbTxn {
 
   /* package */ void discard0(int flags) { db_javaJNI.DbTxn_discard0(swigCPtr, this, flags); }
 
-  public String get_name() throws com.sleepycat.jni.db.DatabaseException {
+  public String get_name() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.DbTxn_get_name(swigCPtr, this);
   }
 
-  public int id() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.DbTxn_id(swigCPtr, this); }
+  public int id() throws com.sleepycat.db.DatabaseException { return db_javaJNI.DbTxn_id(swigCPtr, this); }
 
-  public void prepare(byte[] gid) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.DbTxn_prepare(swigCPtr, this, gid); }
+  public void prepare(byte[] gid) throws com.sleepycat.db.DatabaseException { db_javaJNI.DbTxn_prepare(swigCPtr, this, gid); }
 
-  public void set_timeout(long timeout, int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.DbTxn_set_timeout(swigCPtr, this, timeout, flags); }
+  public void set_timeout(long timeout, int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.DbTxn_set_timeout(swigCPtr, this, timeout, flags); }
 
-  public void set_name(String name) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.DbTxn_set_name(swigCPtr, this, name); }
+  public void set_name(String name) throws com.sleepycat.db.DatabaseException { db_javaJNI.DbTxn_set_name(swigCPtr, this, name); }
 
 }

@@ -8,9 +8,9 @@
 
 package com.sleepycat.jni.persist.impl;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntryBinding;
 import com.sleepycat.jni.bind.tuple.TupleBase;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * A persistence key binding for a given key class.

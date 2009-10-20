@@ -8,10 +8,10 @@
 
 package com.sleepycat.jni.persist.impl;
 
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Sequence;
 import com.sleepycat.jni.bind.tuple.TupleBase;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Sequence;
 
 /**
  * Assigns primary keys from a Sequence.

@@ -8,11 +8,11 @@
 
 package com.sleepycat.jni.bind.tuple;
 
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.ForeignKeyNullifier;
-import com.sleepycat.jni.db.SecondaryDatabase;
-import com.sleepycat.jni.db.SecondaryKeyCreator;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.ForeignKeyNullifier;
+import com.sleepycat.db.SecondaryDatabase;
+import com.sleepycat.db.SecondaryKeyCreator;
 
 /**
  * An abstract key creator that uses a tuple key and a tuple data entry. This
@@ -23,14 +23,14 @@ import com.sleepycat.jni.db.SecondaryKeyCreator;
  * <ul>
  * <li> {@link #createSecondaryKey(TupleInput,TupleInput,TupleOutput)} </li>
  * </ul>
- * <p>If {@link com.sleepycat.jni.db.ForeignKeyDeleteAction#NULLIFY} was
+ * <p>If {@link com.sleepycat.db.ForeignKeyDeleteAction#NULLIFY} was
  * specified when opening the secondary database, the following method must be
  * overridden to nullify the foreign index key.  If NULLIFY was not specified,
  * this method need not be overridden.</p>
  * <ul>
  * <li> {@link #nullifyForeignKey(TupleInput,TupleOutput)} </li>
  * </ul>
- * <p>If {@link com.sleepycat.jni.db.ForeignKeyDeleteAction#NULLIFY} was
+ * <p>If {@link com.sleepycat.db.ForeignKeyDeleteAction#NULLIFY} was
  * specified when creating the secondary, this method is called when the
  * entity for this foreign key is deleted.  If NULLIFY was not specified,
  * this method will not be called and may always return false.</p>

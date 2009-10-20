@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.bind.tuple;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * A base class for tuple bindings and tuple key creators that provides control

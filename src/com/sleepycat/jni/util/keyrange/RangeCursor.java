@@ -8,13 +8,13 @@
 
 package com.sleepycat.jni.util.keyrange;
 
+import com.sleepycat.db.Cursor;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.OperationStatus;
+import com.sleepycat.db.SecondaryCursor;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.Cursor;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.OperationStatus;
-import com.sleepycat.jni.db.SecondaryCursor;
 
 /**
  * A cursor-like interface that enforces a key range.  The method signatures

@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.bind;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * A binding between a key or data entry and a key or data object.

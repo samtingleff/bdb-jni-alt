@@ -11,8 +11,8 @@ package com.sleepycat.jni.bind.tuple;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * An abstract <code>EntryBinding</code> that treats a key or data entry as a

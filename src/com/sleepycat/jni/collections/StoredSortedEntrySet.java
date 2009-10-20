@@ -60,7 +60,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the first element.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object first() {
 
@@ -74,7 +74,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the last element.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object last() {
 
@@ -94,7 +94,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet headSet(Object toMapEntry) {
 
@@ -116,7 +116,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet headSet(Object toMapEntry, boolean toInclusive) {
 
@@ -136,7 +136,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet tailSet(Object fromMapEntry) {
 
@@ -158,7 +158,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet tailSet(Object fromMapEntry, boolean fromInclusive) {
 
@@ -180,7 +180,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet subSet(Object fromMapEntry, Object toMapEntry) {
 
@@ -207,7 +207,7 @@ public class StoredSortedEntrySet extends StoredEntrySet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet subSet(Object fromMapEntry, boolean fromInclusive,
                             Object toMapEntry, boolean toInclusive) {

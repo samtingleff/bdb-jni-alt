@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * Format for simple types, including primitives.  Additional methods are

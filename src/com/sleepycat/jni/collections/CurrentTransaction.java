@@ -13,16 +13,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.WeakHashMap;
 
+import com.sleepycat.db.Cursor;
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Environment;
+import com.sleepycat.db.EnvironmentConfig;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.Transaction;
+import com.sleepycat.db.TransactionConfig;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.Cursor;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Environment;
-import com.sleepycat.jni.db.EnvironmentConfig;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.Transaction;
-import com.sleepycat.jni.db.TransactionConfig;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 
 /**

@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.bind.tuple;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * A concrete <code>EntryBinding</code> that uses the <code>TupleInput</code>

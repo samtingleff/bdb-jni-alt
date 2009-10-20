@@ -8,7 +8,7 @@
 
 package com.sleepycat.db.internal;
 
-import com.sleepycat.jni.db.*;
+import com.sleepycat.db.*;
 
 import java.util.Comparator;
 

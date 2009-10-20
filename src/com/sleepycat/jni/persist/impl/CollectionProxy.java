@@ -16,8 +16,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.tuple.TupleBase;
-import com.sleepycat.jni.db.DatabaseEntry;
 import com.sleepycat.jni.persist.model.Persistent;
 import com.sleepycat.jni.persist.model.PersistentProxy;
 import com.sleepycat.jni.persist.raw.RawObject;

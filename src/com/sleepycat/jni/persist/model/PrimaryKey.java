@@ -143,7 +143,7 @@ public @interface PrimaryKey {
      *
      * <p>A single sequence may be used for more than one entity class by
      * specifying the same sequence name for each {@code PrimaryKey}.  For
-     * each named sequence, a {@link com.sleepycat.jni.db.Sequence} will be used to
+     * each named sequence, a {@link com.sleepycat.db.Sequence} will be used to
      * assign key values.  For more information on configuring sequences, see
      * {@link EntityStore#setSequenceConfig EntityStore.setSequenceConfig}.</p>
      *

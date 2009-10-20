@@ -14,9 +14,9 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import com.sleepycat.db.Database;
 import com.sleepycat.jni.bind.EntityBinding;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.Database;
 import com.sleepycat.jni.util.keyrange.KeyRangeException;
 
 /**
@@ -57,7 +57,7 @@ public class StoredMap extends StoredContainer implements Map {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredMap(Database database, EntryBinding keyBinding,
                      EntryBinding valueBinding, boolean writeAllowed) {
@@ -86,7 +86,7 @@ public class StoredMap extends StoredContainer implements Map {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredMap(Database database, EntryBinding keyBinding,
                      EntryBinding valueBinding,
@@ -115,7 +115,7 @@ public class StoredMap extends StoredContainer implements Map {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredMap(Database database, EntryBinding keyBinding,
                      EntityBinding valueEntityBinding, boolean writeAllowed) {
@@ -144,7 +144,7 @@ public class StoredMap extends StoredContainer implements Map {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredMap(Database database, EntryBinding keyBinding,
                      EntityBinding valueEntityBinding,
@@ -211,7 +211,7 @@ public class StoredMap extends StoredContainer implements Map {
      * This method conforms to the {@link Map#get} interface.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object get(Object key) {
 
@@ -241,7 +241,7 @@ public class StoredMap extends StoredContainer implements Map {
      * primary key.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object put(Object key, Object value) {
 
@@ -269,7 +269,7 @@ public class StoredMap extends StoredContainer implements Map {
      * PrimaryKeyAssigner} and is not a QUEUE or RECNO database.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object append(Object value) {
 
@@ -293,7 +293,7 @@ public class StoredMap extends StoredContainer implements Map {
      * @throws UnsupportedOperationException if the collection is read-only.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object remove(Object key) {
 
@@ -307,7 +307,7 @@ public class StoredMap extends StoredContainer implements Map {
      * conforms to the {@link Map#containsKey} interface.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public boolean containsKey(Object key) {
 
@@ -321,7 +321,7 @@ public class StoredMap extends StoredContainer implements Map {
      * the {@link Map#containsValue} interface.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public boolean containsValue(Object value) {
 
@@ -339,7 +339,7 @@ public class StoredMap extends StoredContainer implements Map {
      * if the collection is indexed.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public void putAll(Map map) {
 
@@ -373,7 +373,7 @@ public class StoredMap extends StoredContainer implements Map {
      * map.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      *
      * @see #areKeyRangesAllowed
      * @see #isWriteAllowed
@@ -396,7 +396,7 @@ public class StoredMap extends StoredContainer implements Map {
      * this map.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      *
      * @see #areKeyRangesAllowed
      * @see #isWriteAllowed
@@ -421,7 +421,7 @@ public class StoredMap extends StoredContainer implements Map {
      * this map.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      *
      * @see #areKeyRangesAllowed
      * @see #isWriteAllowed
@@ -447,7 +447,7 @@ public class StoredMap extends StoredContainer implements Map {
      * @param key is the key for which values are to be returned.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Collection duplicates(Object key) {
 
@@ -479,7 +479,7 @@ public class StoredMap extends StoredContainer implements Map {
      * map.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Map duplicatesMap(Object secondaryKey,
                              EntryBinding primaryKeyBinding) {
@@ -503,7 +503,7 @@ public class StoredMap extends StoredContainer implements Map {
      * method conforms to the {@link Map#equals} interface.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public boolean equals(Object other) {
 
@@ -535,7 +535,7 @@ public class StoredMap extends StoredContainer implements Map {
      * @return the string representation.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public String toString() {
 

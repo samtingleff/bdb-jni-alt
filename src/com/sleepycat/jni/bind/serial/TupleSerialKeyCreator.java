@@ -8,14 +8,14 @@
 
 package com.sleepycat.jni.bind.serial;
 
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.ForeignKeyNullifier;
+import com.sleepycat.db.SecondaryDatabase;
+import com.sleepycat.db.SecondaryKeyCreator;
 import com.sleepycat.jni.bind.tuple.TupleBase;
 import com.sleepycat.jni.bind.tuple.TupleInput;
 import com.sleepycat.jni.bind.tuple.TupleOutput;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.ForeignKeyNullifier;
-import com.sleepycat.jni.db.SecondaryDatabase;
-import com.sleepycat.jni.db.SecondaryKeyCreator;
 
 /**
  * A abstract key creator that uses a tuple key and a serial data entry. This
@@ -27,7 +27,7 @@ import com.sleepycat.jni.db.SecondaryKeyCreator;
  * <ul>
  * <li> {@link #createSecondaryKey(TupleInput,Object,TupleOutput)} </li>
  * </ul>
- * <p>If {@link com.sleepycat.jni.db.ForeignKeyDeleteAction#NULLIFY} was
+ * <p>If {@link com.sleepycat.db.ForeignKeyDeleteAction#NULLIFY} was
  * specified when opening the secondary database, the following method must be
  * overridden to nullify the foreign index key.  If NULLIFY was not specified,
  * this method need not be overridden.</p>

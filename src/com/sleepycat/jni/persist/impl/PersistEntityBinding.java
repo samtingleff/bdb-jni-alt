@@ -8,9 +8,9 @@
 
 package com.sleepycat.jni.persist.impl;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntityBinding;
 import com.sleepycat.jni.bind.tuple.TupleBase;
-import com.sleepycat.jni.db.DatabaseEntry;
 import com.sleepycat.jni.persist.model.EntityModel;
 import com.sleepycat.jni.persist.raw.RawObject;
 

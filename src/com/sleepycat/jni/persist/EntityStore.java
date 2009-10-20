@@ -10,14 +10,14 @@ package com.sleepycat.jni.persist;
 
 import java.util.Set;
 
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseConfig;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Environment;
-import com.sleepycat.jni.db.SecondaryConfig;
-import com.sleepycat.jni.db.Sequence;
-import com.sleepycat.jni.db.SequenceConfig;
-import com.sleepycat.jni.db.Transaction;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseConfig;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Environment;
+import com.sleepycat.db.SecondaryConfig;
+import com.sleepycat.db.Sequence;
+import com.sleepycat.db.SequenceConfig;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.persist.evolve.EvolveConfig;
 import com.sleepycat.jni.persist.evolve.EvolveStats;
 import com.sleepycat.jni.persist.evolve.IncompatibleClassException;
@@ -56,11 +56,11 @@ import com.sleepycat.jni.persist.model.SecondaryKey;
  * these indices to store and access entity records by key.</p>
  *
  * <p>Although not normally needed, you can also use the entity store along
- * with the {@link com.sleepycat.jni.db Base API}.  Methods in the {@link
+ * with the {@link com.sleepycat.db Base API}.  Methods in the {@link
  * PrimaryIndex} and {@link SecondaryIndex} classes may be used to obtain
  * databases and bindings.  The databases may be used directly for accessing
  * entity records.  The bindings should be called explicitly to translate
- * between {@link com.sleepycat.jni.db.DatabaseEntry} objects and entity model
+ * between {@link com.sleepycat.db.DatabaseEntry} objects and entity model
  * objects.</p>
  *
  * <p>Each primary and secondary index is associated internally with a {@link

@@ -11,8 +11,8 @@ package com.sleepycat.jni.collections;
 import java.util.Comparator;
 import java.util.SortedSet;
 
+import com.sleepycat.db.Database;
 import com.sleepycat.jni.bind.EntityBinding;
-import com.sleepycat.jni.db.Database;
 
 /**
  * The SortedSet returned by Map.values() and which can also be constructed
@@ -53,7 +53,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredSortedValueSet(Database database,
                                 EntityBinding valueEntityBinding,
@@ -98,7 +98,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the first element.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object first() {
 
@@ -112,7 +112,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the last element.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object last() {
 
@@ -132,7 +132,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet headSet(Object toValue) {
 
@@ -154,7 +154,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet headSet(Object toValue, boolean toInclusive) {
 
@@ -174,7 +174,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet tailSet(Object fromValue) {
 
@@ -196,7 +196,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet tailSet(Object fromValue, boolean fromInclusive) {
 
@@ -218,7 +218,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet subSet(Object fromValue, Object toValue) {
 
@@ -245,7 +245,7 @@ public class StoredSortedValueSet extends StoredValueSet implements SortedSet {
      * @return the subset.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedSet subSet(Object fromValue, boolean fromInclusive,
                             Object toValue, boolean toInclusive) {

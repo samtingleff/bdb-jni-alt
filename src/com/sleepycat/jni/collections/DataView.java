@@ -8,21 +8,21 @@
 
 package com.sleepycat.jni.collections;
 
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseConfig;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Environment;
+import com.sleepycat.db.JoinConfig;
+import com.sleepycat.db.OperationStatus;
+import com.sleepycat.db.SecondaryConfig;
+import com.sleepycat.db.SecondaryDatabase;
+import com.sleepycat.db.SecondaryKeyCreator;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.bind.EntityBinding;
 import com.sleepycat.jni.bind.EntryBinding;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseConfig;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Environment;
-import com.sleepycat.jni.db.JoinConfig;
-import com.sleepycat.jni.db.OperationStatus;
-import com.sleepycat.jni.db.SecondaryConfig;
-import com.sleepycat.jni.db.SecondaryDatabase;
-import com.sleepycat.jni.db.SecondaryKeyCreator;
-import com.sleepycat.jni.db.Transaction;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 import com.sleepycat.jni.util.keyrange.KeyRange;
 import com.sleepycat.jni.util.keyrange.KeyRangeException;

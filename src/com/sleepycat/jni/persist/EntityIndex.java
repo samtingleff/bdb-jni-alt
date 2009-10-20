@@ -11,17 +11,17 @@ package com.sleepycat.jni.persist;
 import java.util.Map;
 import java.util.SortedMap;
 
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Environment;
+import com.sleepycat.db.EnvironmentConfig;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.SecondaryDatabase;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.collections.StoredMap;
 import com.sleepycat.jni.collections.StoredSortedMap;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Environment;
-import com.sleepycat.jni.db.EnvironmentConfig;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.SecondaryDatabase;
-import com.sleepycat.jni.db.Transaction;
 
 /**
  * The interface for accessing keys and entities via a primary or secondary
@@ -294,7 +294,7 @@ import com.sleepycat.jni.db.Transaction;
  * EntityStore store = new EntityStore(env, "myStore", storeConfig);</pre>
  *
  * <p>Transactions are represented by {@link Transaction} objects, which are
- * part of the {@link com.sleepycat.jni.db Base API}.  Transactions are created
+ * part of the {@link com.sleepycat.db Base API}.  Transactions are created
  * using the {@link Environment#beginTransaction Environment.beginTransaction}
  * method.</p>
  *
@@ -548,7 +548,7 @@ import com.sleepycat.jni.db.Transaction;
  *
  * <p>Each Direct Persistence Layer index is associated with an underlying
  * {@link Database} or {@link SecondaryDatabase} defined in the {@link
- * com.sleepycat.jni.db Base API}.  At this level, an index is a Btree managed by
+ * com.sleepycat.db Base API}.  At this level, an index is a Btree managed by
  * the Berkeley DB Java Edition transactional storage engine.  Although you may
  * never need to work at the {@code Base API} level, keep in mind that some
  * types of performance tuning can be done by configuring the underlying

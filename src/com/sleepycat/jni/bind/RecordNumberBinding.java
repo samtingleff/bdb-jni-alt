@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.bind;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * An <code>EntryBinding</code> that treats a record number key entry as a

@@ -11,23 +11,23 @@ package com.sleepycat.jni.compat;
 import java.io.FileNotFoundException;
 import java.util.Comparator;
 
-import com.sleepycat.jni.db.Cursor;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseConfig;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.DatabaseType;
-import com.sleepycat.jni.db.Environment;
-import com.sleepycat.jni.db.EnvironmentConfig;
-import com.sleepycat.jni.db.LockDetectMode;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.OperationStatus;
-import com.sleepycat.jni.db.SecondaryConfig;
-import com.sleepycat.jni.db.SecondaryCursor;
-import com.sleepycat.jni.db.SecondaryDatabase;
-import com.sleepycat.jni.db.Transaction;
-import com.sleepycat.jni.db.TransactionConfig;
+import com.sleepycat.db.Cursor;
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseConfig;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.DatabaseType;
+import com.sleepycat.db.Environment;
+import com.sleepycat.db.EnvironmentConfig;
+import com.sleepycat.db.LockDetectMode;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.OperationStatus;
+import com.sleepycat.db.SecondaryConfig;
+import com.sleepycat.db.SecondaryCursor;
+import com.sleepycat.db.SecondaryDatabase;
+import com.sleepycat.db.Transaction;
+import com.sleepycat.db.TransactionConfig;
 
 /**
  * A minimal set of DB-JE compatibility methods for internal use only.

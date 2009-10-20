@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.persist.model;
 
-import com.sleepycat.jni.db.DatabaseException;
+import com.sleepycat.db.DatabaseException;
 
 /**
  * Specifies the action to take when a related entity is deleted having a

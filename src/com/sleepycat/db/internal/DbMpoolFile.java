@@ -8,7 +8,7 @@
 
 package com.sleepycat.db.internal;
 
-import com.sleepycat.jni.db.*;
+import com.sleepycat.db.*;
 
 import java.util.Comparator;
 
@@ -33,20 +33,20 @@ public class DbMpoolFile {
     swigCPtr = 0;
   }
 
-  public int get_priority() throws com.sleepycat.jni.db.DatabaseException {
+  public int get_priority() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.DbMpoolFile_get_priority(swigCPtr, this);
   }
 
-  public void set_priority(int priority) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.DbMpoolFile_set_priority(swigCPtr, this, priority); }
+  public void set_priority(int priority) throws com.sleepycat.db.DatabaseException { db_javaJNI.DbMpoolFile_set_priority(swigCPtr, this, priority); }
 
-  public int get_flags() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.DbMpoolFile_get_flags(swigCPtr, this); }
+  public int get_flags() throws com.sleepycat.db.DatabaseException { return db_javaJNI.DbMpoolFile_get_flags(swigCPtr, this); }
 
-  public void set_flags(int flags, boolean onoff) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.DbMpoolFile_set_flags(swigCPtr, this, flags, onoff); }
+  public void set_flags(int flags, boolean onoff) throws com.sleepycat.db.DatabaseException { db_javaJNI.DbMpoolFile_set_flags(swigCPtr, this, flags, onoff); }
 
-  public long get_maxsize() throws com.sleepycat.jni.db.DatabaseException {
+  public long get_maxsize() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.DbMpoolFile_get_maxsize(swigCPtr, this);
   }
 
-  public void set_maxsize(long bytes) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.DbMpoolFile_set_maxsize(swigCPtr, this, bytes); }
+  public void set_maxsize(long bytes) throws com.sleepycat.db.DatabaseException { db_javaJNI.DbMpoolFile_set_maxsize(swigCPtr, this, bytes); }
 
 }

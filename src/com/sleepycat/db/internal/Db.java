@@ -8,7 +8,7 @@
 
 package com.sleepycat.db.internal;
 
-import com.sleepycat.jni.db.*;
+import com.sleepycat.db.*;
 
 import java.util.Comparator;
 
@@ -76,7 +76,7 @@ public class Db {
 		dbenv = null;
 	}
 
-	public boolean getPrivateDbEnv() throws com.sleepycat.jni.db.DatabaseException {
+	public boolean getPrivateDbEnv() throws com.sleepycat.db.DatabaseException {
 		return private_dbenv;
 	}
 
@@ -97,7 +97,7 @@ public class Db {
 		append_recno_handler.appendRecordNumber(wrapper, data, recno);
 	}
 
-	public RecordNumberAppender get_append_recno() throws com.sleepycat.jni.db.DatabaseException {
+	public RecordNumberAppender get_append_recno() throws com.sleepycat.db.DatabaseException {
 		return append_recno_handler;
 	}
 
@@ -105,7 +105,7 @@ public class Db {
 		return bt_compare_handler.compare(arr1, arr2);
 	}
 
-	public Comparator get_bt_compare() throws com.sleepycat.jni.db.DatabaseException {
+	public Comparator get_bt_compare() throws com.sleepycat.db.DatabaseException {
 		return bt_compare_handler;
 	}
 
@@ -114,7 +114,7 @@ public class Db {
 		return bt_prefix_handler.prefix(wrapper, dbt1, dbt2);
 	}
 
-	public BtreePrefixCalculator get_bt_prefix() throws com.sleepycat.jni.db.DatabaseException {
+	public BtreePrefixCalculator get_bt_prefix() throws com.sleepycat.db.DatabaseException {
 		return bt_prefix_handler;
 	}
 
@@ -126,7 +126,7 @@ public class Db {
 		/* No other database feedback types known. */
 	}
 
-	public FeedbackHandler get_feedback() throws com.sleepycat.jni.db.DatabaseException {
+	public FeedbackHandler get_feedback() throws com.sleepycat.db.DatabaseException {
 		return db_feedback_handler;
 	}
 
@@ -134,7 +134,7 @@ public class Db {
 		return h_compare_handler.compare(arr1, arr2);
 	}
 
-	public Comparator get_h_compare() throws com.sleepycat.jni.db.DatabaseException {
+	public Comparator get_h_compare() throws com.sleepycat.db.DatabaseException {
 		return h_compare_handler;
 	}
 
@@ -142,7 +142,7 @@ public class Db {
 		return dup_compare_handler.compare(arr1, arr2);
 	}
 
-	public Comparator get_dup_compare() throws com.sleepycat.jni.db.DatabaseException {
+	public Comparator get_dup_compare() throws com.sleepycat.db.DatabaseException {
 		return dup_compare_handler;
 	}
 
@@ -150,7 +150,7 @@ public class Db {
 		return h_hash_handler.hash(wrapper, data, len);
 	}
 
-	public Hasher get_h_hash() throws com.sleepycat.jni.db.DatabaseException {
+	public Hasher get_h_hash() throws com.sleepycat.db.DatabaseException {
 		return h_hash_handler;
 	}
 
@@ -191,11 +191,11 @@ public class Db {
 		return null;
 	}
 
-	public SecondaryKeyCreator get_seckey_create() throws com.sleepycat.jni.db.DatabaseException {
+	public SecondaryKeyCreator get_seckey_create() throws com.sleepycat.db.DatabaseException {
 		return seckey_create_handler;
 	}
 
-	public SecondaryMultiKeyCreator get_secmultikey_create() throws com.sleepycat.jni.db.DatabaseException {
+	public SecondaryMultiKeyCreator get_secmultikey_create() throws com.sleepycat.db.DatabaseException {
 		return secmultikey_create_handler;
 	}
 
@@ -282,33 +282,33 @@ public class Db {
 		dbenv.set_paniccall(db_panic_fcn);
 	}
 
-	public PanicHandler get_paniccall() throws com.sleepycat.jni.db.DatabaseException {
+	public PanicHandler get_paniccall() throws com.sleepycat.db.DatabaseException {
 		return dbenv.get_paniccall();
 	}
 
-  public Db(DbEnv dbenv, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public Db(DbEnv dbenv, int flags) throws com.sleepycat.db.DatabaseException {
     this(db_javaJNI.new_Db(DbEnv.getCPtr(dbenv), dbenv, flags), true);
     initialize(dbenv);
   }
 
-  public void associate(DbTxn txnid, Db secondary, com.sleepycat.jni.db.SecondaryKeyCreator callback, int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_associate(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, Db.getCPtr(secondary), secondary,  (secondary.seckey_create_handler = callback) != null ||
+  public void associate(DbTxn txnid, Db secondary, com.sleepycat.db.SecondaryKeyCreator callback, int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_associate(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, Db.getCPtr(secondary), secondary,  (secondary.seckey_create_handler = callback) != null ||
 	(secondary.secmultikey_create_handler != null) , flags); }
 
-  public void associate_foreign(Db primary, com.sleepycat.jni.db.ForeignKeyNullifier callback, int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_associate_foreign(swigCPtr, this, Db.getCPtr(primary), primary,  (primary.foreignkey_nullify_handler = callback) != null ||
+  public void associate_foreign(Db primary, com.sleepycat.db.ForeignKeyNullifier callback, int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_associate_foreign(swigCPtr, this, Db.getCPtr(primary), primary,  (primary.foreignkey_nullify_handler = callback) != null ||
 	(primary.foreignmultikey_nullify_handler != null) , flags); }
 
-  public void compact(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry start, com.sleepycat.jni.db.DatabaseEntry stop, com.sleepycat.jni.db.CompactStats c_data, int flags, com.sleepycat.jni.db.DatabaseEntry end) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_compact(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, start, stop, c_data, flags, end); }
+  public void compact(DbTxn txnid, com.sleepycat.db.DatabaseEntry start, com.sleepycat.db.DatabaseEntry stop, com.sleepycat.db.CompactStats c_data, int flags, com.sleepycat.db.DatabaseEntry end) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_compact(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, start, stop, c_data, flags, end); }
 
   /* package */ int close0(int flags) {
     return db_javaJNI.Db_close0(swigCPtr, this, flags);
   }
 
-  public Dbc cursor(DbTxn txnid, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public Dbc cursor(DbTxn txnid, int flags) throws com.sleepycat.db.DatabaseException {
     long cPtr = db_javaJNI.Db_cursor(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, flags);
     return (cPtr == 0) ? null : new Dbc(cPtr, false);
   }
 
-  public int del(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry key, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int del(DbTxn txnid, com.sleepycat.db.DatabaseEntry key, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_del(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, flags);
   }
 
@@ -320,95 +320,95 @@ public class Db {
     db_javaJNI.Db_errx(swigCPtr, this, message);
   }
 
-  public int exists(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry key, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int exists(DbTxn txnid, com.sleepycat.db.DatabaseEntry key, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_exists(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, flags);
   }
 
-  public int get(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry key, com.sleepycat.jni.db.DatabaseEntry data, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int get(DbTxn txnid, com.sleepycat.db.DatabaseEntry key, com.sleepycat.db.DatabaseEntry data, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, data, flags);
   }
 
-  public boolean get_byteswapped() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_byteswapped(swigCPtr, this); }
+  public boolean get_byteswapped() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_byteswapped(swigCPtr, this); }
 
-  public long get_cachesize() throws com.sleepycat.jni.db.DatabaseException {
+  public long get_cachesize() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_cachesize(swigCPtr, this);
   }
 
-  public int get_cachesize_ncache() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_cachesize_ncache(swigCPtr, this); }
+  public int get_cachesize_ncache() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_cachesize_ncache(swigCPtr, this); }
 
-  public String get_filename() throws com.sleepycat.jni.db.DatabaseException {
+  public String get_filename() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_filename(swigCPtr, this);
   }
 
-  public String get_dbname() throws com.sleepycat.jni.db.DatabaseException {
+  public String get_dbname() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_dbname(swigCPtr, this);
   }
 
-  public int get_encrypt_flags() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_encrypt_flags(swigCPtr, this); }
+  public int get_encrypt_flags() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_encrypt_flags(swigCPtr, this); }
 
-  public int get_flags() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_flags(swigCPtr, this); }
+  public int get_flags() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_flags(swigCPtr, this); }
 
-  public int get_lorder() throws com.sleepycat.jni.db.DatabaseException {
+  public int get_lorder() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_lorder(swigCPtr, this);
   }
 
-  public DbMpoolFile get_mpf() throws com.sleepycat.jni.db.DatabaseException {
+  public DbMpoolFile get_mpf() throws com.sleepycat.db.DatabaseException {
     long cPtr = db_javaJNI.Db_get_mpf(swigCPtr, this);
     return (cPtr == 0) ? null : new DbMpoolFile(cPtr, false);
   }
 
-  public int get_open_flags() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_open_flags(swigCPtr, this); }
+  public int get_open_flags() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_open_flags(swigCPtr, this); }
 
-  public int get_pagesize() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_pagesize(swigCPtr, this); }
+  public int get_pagesize() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_pagesize(swigCPtr, this); }
 
-  public int get_bt_minkey() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_bt_minkey(swigCPtr, this); }
+  public int get_bt_minkey() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_bt_minkey(swigCPtr, this); }
 
-  public int get_h_ffactor() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_h_ffactor(swigCPtr, this); }
+  public int get_h_ffactor() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_h_ffactor(swigCPtr, this); }
 
-  public int get_h_nelem() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_h_nelem(swigCPtr, this); }
+  public int get_h_nelem() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_h_nelem(swigCPtr, this); }
 
-  public int get_re_delim() throws com.sleepycat.jni.db.DatabaseException {
+  public int get_re_delim() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_re_delim(swigCPtr, this);
   }
 
-  public int get_priority() throws com.sleepycat.jni.db.DatabaseException {
+  public int get_priority() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_priority(swigCPtr, this);
   }
 
-  public int get_re_len() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_re_len(swigCPtr, this); }
+  public int get_re_len() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_re_len(swigCPtr, this); }
 
-  public int get_re_pad() throws com.sleepycat.jni.db.DatabaseException {
+  public int get_re_pad() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_re_pad(swigCPtr, this);
   }
 
-  public String get_re_source() throws com.sleepycat.jni.db.DatabaseException {
+  public String get_re_source() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_re_source(swigCPtr, this);
   }
 
-  public int get_q_extentsize() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_q_extentsize(swigCPtr, this); }
+  public int get_q_extentsize() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_q_extentsize(swigCPtr, this); }
 
-  public boolean get_multiple() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_multiple(swigCPtr, this); }
+  public boolean get_multiple() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_multiple(swigCPtr, this); }
 
-  public boolean get_transactional() throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_get_transactional(swigCPtr, this); }
+  public boolean get_transactional() throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_get_transactional(swigCPtr, this); }
 
-  public int get_type() throws com.sleepycat.jni.db.DatabaseException {
+  public int get_type() throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_get_type(swigCPtr, this);
   }
 
-  public Dbc join(Dbc[] curslist, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public Dbc join(Dbc[] curslist, int flags) throws com.sleepycat.db.DatabaseException {
     long cPtr = db_javaJNI.Db_join(swigCPtr, this, curslist, flags);
     return (cPtr == 0) ? null : new Dbc(cPtr, true);
   }
 
-  public void key_range(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry key, com.sleepycat.jni.db.KeyRange key_range, int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_key_range(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, key_range, flags); }
+  public void key_range(DbTxn txnid, com.sleepycat.db.DatabaseEntry key, com.sleepycat.db.KeyRange key_range, int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_key_range(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, key_range, flags); }
 
-  public void open(DbTxn txnid, String file, String database, int type, int flags, int mode) throws com.sleepycat.jni.db.DatabaseException, java.io.FileNotFoundException { db_javaJNI.Db_open(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, file, database, type, flags, mode); }
+  public void open(DbTxn txnid, String file, String database, int type, int flags, int mode) throws com.sleepycat.db.DatabaseException, java.io.FileNotFoundException { db_javaJNI.Db_open(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, file, database, type, flags, mode); }
 
-  public int pget(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry key, com.sleepycat.jni.db.DatabaseEntry pkey, com.sleepycat.jni.db.DatabaseEntry data, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int pget(DbTxn txnid, com.sleepycat.db.DatabaseEntry key, com.sleepycat.db.DatabaseEntry pkey, com.sleepycat.db.DatabaseEntry data, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_pget(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, pkey, data, flags);
   }
 
-  public int put(DbTxn txnid, com.sleepycat.jni.db.DatabaseEntry key, com.sleepycat.jni.db.DatabaseEntry data, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int put(DbTxn txnid, com.sleepycat.db.DatabaseEntry key, com.sleepycat.db.DatabaseEntry data, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_put(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, key, data, flags);
   }
 
@@ -416,57 +416,57 @@ public class Db {
 
   /* package */ void rename0(String file, String database, String newname, int flags) { db_javaJNI.Db_rename0(swigCPtr, this, file, database, newname, flags); }
 
-  public void set_append_recno(com.sleepycat.jni.db.RecordNumberAppender db_append_recno_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_append_recno(swigCPtr, this,  (append_recno_handler = db_append_recno_fcn) != null ); }
+  public void set_append_recno(com.sleepycat.db.RecordNumberAppender db_append_recno_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_append_recno(swigCPtr, this,  (append_recno_handler = db_append_recno_fcn) != null ); }
 
-  public void set_bt_compare(java.util.Comparator bt_compare_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_bt_compare(swigCPtr, this,  (bt_compare_handler = bt_compare_fcn) != null ); }
+  public void set_bt_compare(java.util.Comparator bt_compare_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_bt_compare(swigCPtr, this,  (bt_compare_handler = bt_compare_fcn) != null ); }
 
-  public void set_bt_minkey(int bt_minkey) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_bt_minkey(swigCPtr, this, bt_minkey); }
+  public void set_bt_minkey(int bt_minkey) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_bt_minkey(swigCPtr, this, bt_minkey); }
 
-  public void set_bt_prefix(com.sleepycat.jni.db.BtreePrefixCalculator bt_prefix_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_bt_prefix(swigCPtr, this,  (bt_prefix_handler = bt_prefix_fcn) != null ); }
+  public void set_bt_prefix(com.sleepycat.db.BtreePrefixCalculator bt_prefix_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_bt_prefix(swigCPtr, this,  (bt_prefix_handler = bt_prefix_fcn) != null ); }
 
-  public void set_cachesize(long bytes, int ncache) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_cachesize(swigCPtr, this, bytes, ncache); }
+  public void set_cachesize(long bytes, int ncache) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_cachesize(swigCPtr, this, bytes, ncache); }
 
-  public void set_dup_compare(java.util.Comparator dup_compare_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_dup_compare(swigCPtr, this,  (dup_compare_handler = dup_compare_fcn) != null ); }
+  public void set_dup_compare(java.util.Comparator dup_compare_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_dup_compare(swigCPtr, this,  (dup_compare_handler = dup_compare_fcn) != null ); }
 
-  public void set_encrypt(String passwd, int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_encrypt(swigCPtr, this, passwd, flags); }
+  public void set_encrypt(String passwd, int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_encrypt(swigCPtr, this, passwd, flags); }
 
-  public void set_feedback(com.sleepycat.jni.db.FeedbackHandler db_feedback_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_feedback(swigCPtr, this,  (db_feedback_handler = db_feedback_fcn) != null ); }
+  public void set_feedback(com.sleepycat.db.FeedbackHandler db_feedback_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_feedback(swigCPtr, this,  (db_feedback_handler = db_feedback_fcn) != null ); }
 
-  public void set_flags(int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_flags(swigCPtr, this, flags); }
+  public void set_flags(int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_flags(swigCPtr, this, flags); }
 
-  public void set_h_compare(java.util.Comparator h_compare_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_h_compare(swigCPtr, this,  (h_compare_handler = h_compare_fcn) != null ); }
+  public void set_h_compare(java.util.Comparator h_compare_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_h_compare(swigCPtr, this,  (h_compare_handler = h_compare_fcn) != null ); }
 
-  public void set_h_ffactor(int h_ffactor) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_h_ffactor(swigCPtr, this, h_ffactor); }
+  public void set_h_ffactor(int h_ffactor) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_h_ffactor(swigCPtr, this, h_ffactor); }
 
-  public void set_h_hash(com.sleepycat.jni.db.Hasher h_hash_fcn) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_h_hash(swigCPtr, this,  (h_hash_handler = h_hash_fcn) != null ); }
+  public void set_h_hash(com.sleepycat.db.Hasher h_hash_fcn) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_h_hash(swigCPtr, this,  (h_hash_handler = h_hash_fcn) != null ); }
 
-  public void set_h_nelem(int h_nelem) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_h_nelem(swigCPtr, this, h_nelem); }
+  public void set_h_nelem(int h_nelem) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_h_nelem(swigCPtr, this, h_nelem); }
 
-  public void set_lorder(int lorder) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_lorder(swigCPtr, this, lorder); }
+  public void set_lorder(int lorder) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_lorder(swigCPtr, this, lorder); }
 
-  public void set_pagesize(long pagesize) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_pagesize(swigCPtr, this, pagesize); }
+  public void set_pagesize(long pagesize) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_pagesize(swigCPtr, this, pagesize); }
 
-  public void set_priority(int priority) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_priority(swigCPtr, this, priority); }
+  public void set_priority(int priority) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_priority(swigCPtr, this, priority); }
 
-  public void set_re_delim(int re_delim) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_re_delim(swigCPtr, this, re_delim); }
+  public void set_re_delim(int re_delim) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_re_delim(swigCPtr, this, re_delim); }
 
-  public void set_re_len(int re_len) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_re_len(swigCPtr, this, re_len); }
+  public void set_re_len(int re_len) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_re_len(swigCPtr, this, re_len); }
 
-  public void set_re_pad(int re_pad) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_re_pad(swigCPtr, this, re_pad); }
+  public void set_re_pad(int re_pad) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_re_pad(swigCPtr, this, re_pad); }
 
-  public void set_re_source(String source) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_re_source(swigCPtr, this, source); }
+  public void set_re_source(String source) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_re_source(swigCPtr, this, source); }
 
-  public void set_q_extentsize(int extentsize) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_set_q_extentsize(swigCPtr, this, extentsize); }
+  public void set_q_extentsize(int extentsize) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_set_q_extentsize(swigCPtr, this, extentsize); }
 
-  public Object stat(DbTxn txnid, int flags) throws com.sleepycat.jni.db.DatabaseException { return db_javaJNI.Db_stat(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, flags); }
+  public Object stat(DbTxn txnid, int flags) throws com.sleepycat.db.DatabaseException { return db_javaJNI.Db_stat(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, flags); }
 
-  public void sync(int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_sync(swigCPtr, this, flags); }
+  public void sync(int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_sync(swigCPtr, this, flags); }
 
-  public int truncate(DbTxn txnid, int flags) throws com.sleepycat.jni.db.DatabaseException {
+  public int truncate(DbTxn txnid, int flags) throws com.sleepycat.db.DatabaseException {
     return db_javaJNI.Db_truncate(swigCPtr, this, DbTxn.getCPtr(txnid), txnid, flags);
   }
 
-  public void upgrade(String file, int flags) throws com.sleepycat.jni.db.DatabaseException { db_javaJNI.Db_upgrade(swigCPtr, this, file, flags); }
+  public void upgrade(String file, int flags) throws com.sleepycat.db.DatabaseException { db_javaJNI.Db_upgrade(swigCPtr, this, file, flags); }
 
   /* package */ boolean verify0(String file, String database, java.io.OutputStream outfile, int flags) { return db_javaJNI.Db_verify0(swigCPtr, this, file, database, outfile, flags); }
 

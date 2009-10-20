@@ -8,10 +8,10 @@
 
 package com.sleepycat.jni.collections;
 
+import com.sleepycat.db.Cursor;
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.DatabaseException;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.Cursor;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.DatabaseException;
 import com.sleepycat.jni.util.keyrange.KeyRange;
 import com.sleepycat.jni.util.keyrange.RangeCursor;
 

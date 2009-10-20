@@ -16,7 +16,7 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.SortedSet;
 
-import com.sleepycat.jni.db.CursorConfig;
+import com.sleepycat.db.CursorConfig;
 
 /**
  * Static methods operating on collections and maps.

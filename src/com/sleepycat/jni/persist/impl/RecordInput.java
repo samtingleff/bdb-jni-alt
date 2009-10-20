@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.persist.impl;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.tuple.TupleInput;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * Implements EntityInput to read record key-data pairs.  Extends TupleInput to

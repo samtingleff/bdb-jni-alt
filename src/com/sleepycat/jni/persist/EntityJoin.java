@@ -12,17 +12,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.sleepycat.db.Cursor;
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.JoinCursor;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.OperationStatus;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.bind.EntityBinding;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.Cursor;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.JoinCursor;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.OperationStatus;
-import com.sleepycat.jni.db.Transaction;
 
 /**
  * Performs an equality join on two or more secondary keys.

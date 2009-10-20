@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.persist.raw;
 
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Environment;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Environment;
 import com.sleepycat.jni.persist.PrimaryIndex;
 import com.sleepycat.jni.persist.SecondaryIndex;
 import com.sleepycat.jni.persist.StoreConfig;

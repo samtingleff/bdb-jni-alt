@@ -10,8 +10,8 @@ package com.sleepycat.jni.bind.serial;
 
 import java.io.IOException;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.DatabaseEntry;
 import com.sleepycat.jni.util.FastInputStream;
 import com.sleepycat.jni.util.FastOutputStream;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;

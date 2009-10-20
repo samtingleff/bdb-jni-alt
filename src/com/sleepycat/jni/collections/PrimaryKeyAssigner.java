@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.collections;
 
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
 
 /**
  * An interface implemented to assign new primary key values.

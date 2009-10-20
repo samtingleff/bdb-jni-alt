@@ -11,10 +11,10 @@ package com.sleepycat.jni.collections;
 import java.util.Collection;
 import java.util.Iterator;
 
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.OperationStatus;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 
 /**

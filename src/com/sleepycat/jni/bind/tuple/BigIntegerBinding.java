@@ -10,7 +10,7 @@ package com.sleepycat.jni.bind.tuple;
 
 import java.math.BigInteger;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * A concrete <code>TupleBinding</code> for a <code>BigInteger</code> value.

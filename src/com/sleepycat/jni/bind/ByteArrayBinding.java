@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.bind;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * A pass-through <code>EntryBinding</code> that uses the entry's byte array as

@@ -11,9 +11,9 @@ package com.sleepycat.jni.collections;
 import java.util.Map;
 import java.util.Set;
 
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.OperationStatus;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 
 /**

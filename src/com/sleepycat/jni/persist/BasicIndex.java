@@ -8,17 +8,17 @@
 
 package com.sleepycat.jni.persist;
 
+import com.sleepycat.db.Cursor;
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseConfig;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.OperationStatus;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.bind.EntryBinding;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.Cursor;
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseConfig;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.OperationStatus;
-import com.sleepycat.jni.db.Transaction;
 import com.sleepycat.jni.util.keyrange.KeyRange;
 import com.sleepycat.jni.util.keyrange.RangeCursor;
 

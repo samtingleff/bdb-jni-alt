@@ -60,7 +60,7 @@ public interface MarshalledTupleKeyEntity {
      * {@link #marshalSecondaryKey} for the same key name will return false.
      * Other fields in the data object should remain unchanged.</p>
      *
-     * <p>If {@link com.sleepycat.jni.db.ForeignKeyDeleteAction#NULLIFY} was
+     * <p>If {@link com.sleepycat.db.ForeignKeyDeleteAction#NULLIFY} was
      * specified when opening the secondary database, this method is called
      * when the entity for this foreign key is deleted.  If NULLIFY was not
      * specified, this method will not be called and may always return

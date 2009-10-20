@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.persist;
 
-import com.sleepycat.jni.db.Database;
+import com.sleepycat.db.Database;
 import com.sleepycat.jni.persist.impl.Store;
 
 /**

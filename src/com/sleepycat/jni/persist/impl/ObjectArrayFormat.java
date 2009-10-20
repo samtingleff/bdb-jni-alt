@@ -13,7 +13,7 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Set;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.persist.raw.RawObject;
 
 /**

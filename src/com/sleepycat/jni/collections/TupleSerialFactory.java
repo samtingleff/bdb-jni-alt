@@ -8,13 +8,13 @@
 
 package com.sleepycat.jni.collections;
 
+import com.sleepycat.db.Database;
 import com.sleepycat.jni.bind.EntryBinding;
 import com.sleepycat.jni.bind.serial.ClassCatalog;
 import com.sleepycat.jni.bind.serial.TupleSerialMarshalledBinding;
 import com.sleepycat.jni.bind.serial.TupleSerialMarshalledKeyCreator;
 import com.sleepycat.jni.bind.tuple.TupleBinding;
 import com.sleepycat.jni.bind.tuple.TupleMarshalledBinding;
-import com.sleepycat.jni.db.Database;
 
 /**
  * Creates stored collections having tuple keys and serialized entity values.
@@ -99,7 +99,7 @@ public class TupleSerialFactory {
     /**
      * Creates a <code>SecondaryKeyCreator</code> object for use in configuring
      * a <code>SecondaryDatabase</code>.  The returned object implements
-     * the {@link com.sleepycat.jni.db.SecondaryKeyCreator} interface.
+     * the {@link com.sleepycat.db.SecondaryKeyCreator} interface.
      *
      * @param valueBaseClass the base class of the entity values for this
      * store.  It must implement the  {@link

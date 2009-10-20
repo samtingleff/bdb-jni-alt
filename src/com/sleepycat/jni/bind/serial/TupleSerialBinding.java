@@ -8,11 +8,11 @@
 
 package com.sleepycat.jni.bind.serial;
 
+import com.sleepycat.db.DatabaseEntry;
 import com.sleepycat.jni.bind.EntityBinding;
 import com.sleepycat.jni.bind.tuple.TupleBase;
 import com.sleepycat.jni.bind.tuple.TupleInput;
 import com.sleepycat.jni.bind.tuple.TupleOutput;
-import com.sleepycat.jni.db.DatabaseEntry;
 
 /**
  * An abstract <code>EntityBinding</code> that treats an entity's key entry as

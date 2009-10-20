@@ -15,7 +15,7 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import com.sleepycat.jni.db.DatabaseException;
+import com.sleepycat.db.DatabaseException;
 import com.sleepycat.jni.persist.PrimaryIndex;
 import com.sleepycat.jni.persist.SecondaryIndex;
 import com.sleepycat.jni.persist.StoreConfig;

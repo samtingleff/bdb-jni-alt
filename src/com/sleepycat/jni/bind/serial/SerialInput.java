@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectStreamClass;
 
-import com.sleepycat.jni.db.DatabaseException;
+import com.sleepycat.db.DatabaseException;
 import com.sleepycat.jni.util.RuntimeExceptionWrapper;
 
 /**

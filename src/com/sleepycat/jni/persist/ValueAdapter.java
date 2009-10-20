@@ -8,7 +8,7 @@
 
 package com.sleepycat.jni.persist;
 
-import com.sleepycat.jni.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseEntry;
 
 /**
  * An adapter that translates between database entries (key, primary key, data)

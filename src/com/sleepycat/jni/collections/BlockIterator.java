@@ -11,10 +11,10 @@ package com.sleepycat.jni.collections;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.OperationStatus;
 import com.sleepycat.jni.util.keyrange.KeyRange;
 
 /**

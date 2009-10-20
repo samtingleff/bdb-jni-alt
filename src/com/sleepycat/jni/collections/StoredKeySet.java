@@ -10,11 +10,11 @@ package com.sleepycat.jni.collections;
 
 import java.util.Set;
 
+import com.sleepycat.db.Database;
+import com.sleepycat.db.DatabaseEntry;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.DatabaseEntry;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.OperationStatus;
 
 /**
  * The Set returned by Map.keySet() and which can also be constructed directly

@@ -11,10 +11,10 @@ package com.sleepycat.jni.collections;
 import java.util.Comparator;
 import java.util.SortedMap;
 
+import com.sleepycat.db.Database;
+import com.sleepycat.db.OperationStatus;
 import com.sleepycat.jni.bind.EntityBinding;
 import com.sleepycat.jni.bind.EntryBinding;
-import com.sleepycat.jni.db.Database;
-import com.sleepycat.jni.db.OperationStatus;
 
 /**
  * A SortedMap view of a {@link Database}.
@@ -50,7 +50,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredSortedMap(Database database, EntryBinding keyBinding,
                            EntryBinding valueBinding, boolean writeAllowed) {
@@ -78,7 +78,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredSortedMap(Database database, EntryBinding keyBinding,
                            EntryBinding valueBinding,
@@ -106,7 +106,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredSortedMap(Database database, EntryBinding keyBinding,
                            EntityBinding valueEntityBinding,
@@ -135,7 +135,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * defined or a parameter is invalid.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public StoredSortedMap(Database database, EntryBinding keyBinding,
                            EntityBinding valueEntityBinding,
@@ -171,7 +171,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the first key.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object firstKey() {
 
@@ -185,7 +185,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the last key.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public Object lastKey() {
 
@@ -225,7 +225,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the submap.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedMap headMap(Object toKey) {
 
@@ -247,7 +247,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the submap.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedMap headMap(Object toKey, boolean toInclusive) {
 
@@ -267,7 +267,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the submap.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedMap tailMap(Object fromKey) {
 
@@ -289,7 +289,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the submap.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedMap tailMap(Object fromKey, boolean fromInclusive) {
 
@@ -311,7 +311,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the submap.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedMap subMap(Object fromKey, Object toKey) {
 
@@ -338,7 +338,7 @@ public class StoredSortedMap extends StoredMap implements SortedMap {
      * @return the submap.
      *
      * @throws RuntimeExceptionWrapper if a {@link
-     * com.sleepycat.jni.db.DatabaseException} is thrown.
+     * com.sleepycat.db.DatabaseException} is thrown.
      */
     public SortedMap subMap(Object fromKey, boolean fromInclusive,
                             Object toKey, boolean toInclusive) {

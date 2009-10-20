@@ -10,7 +10,7 @@ package com.sleepycat.jni.bind.serial;
 
 import java.io.ObjectStreamClass;
 
-import com.sleepycat.jni.db.DatabaseException;
+import com.sleepycat.db.DatabaseException;
 
 /**
  * A catalog of class description information for use during object

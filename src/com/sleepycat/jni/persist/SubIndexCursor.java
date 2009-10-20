@@ -8,8 +8,8 @@
 
 package com.sleepycat.jni.persist;
 
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.LockMode;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.LockMode;
 import com.sleepycat.jni.util.keyrange.RangeCursor;
 
 /**

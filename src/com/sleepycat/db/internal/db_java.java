@@ -9,7 +9,7 @@
 package com.sleepycat.db.internal;
 
 /* package */ class db_java {
-  public static void DbEnv_lock_vec(DbEnv dbenv, int locker, int flags, com.sleepycat.jni.db.LockRequest[] list, int offset, int nlist) throws com.sleepycat.jni.db.DatabaseException {
+  public static void DbEnv_lock_vec(DbEnv dbenv, int locker, int flags, com.sleepycat.db.LockRequest[] list, int offset, int nlist) throws com.sleepycat.db.DatabaseException {
     db_javaJNI.DbEnv_lock_vec(DbEnv.getCPtr(dbenv), dbenv, locker, flags, list, offset, nlist);
   }
 

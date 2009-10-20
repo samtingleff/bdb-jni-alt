@@ -17,9 +17,9 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.compat.DbCompat;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.Transaction;
 import com.sleepycat.jni.persist.evolve.Converter;
 import com.sleepycat.jni.persist.evolve.Deleter;
 import com.sleepycat.jni.persist.evolve.Mutation;

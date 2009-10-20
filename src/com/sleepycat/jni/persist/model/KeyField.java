@@ -15,7 +15,7 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import com.sleepycat.jni.db.Environment;
+import com.sleepycat.db.Environment;
 
 /**
  * Indicates the sorting position of a key field in a composite key class when

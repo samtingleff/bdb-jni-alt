@@ -10,10 +10,10 @@ package com.sleepycat.jni.persist;
 
 import java.util.Iterator;
 
-import com.sleepycat.jni.db.CursorConfig;
-import com.sleepycat.jni.db.DatabaseException;
-import com.sleepycat.jni.db.LockMode;
-import com.sleepycat.jni.db.Transaction;
+import com.sleepycat.db.CursorConfig;
+import com.sleepycat.db.DatabaseException;
+import com.sleepycat.db.LockMode;
+import com.sleepycat.db.Transaction;
 import com.sleepycat.jni.persist.model.Relationship;
 import com.sleepycat.jni.persist.model.SecondaryKey;
 
